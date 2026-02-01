@@ -1,21 +1,21 @@
 Hạng,Câu lạc bộ,ST,T,H,B,BT,BB,HS,Diem,5_tran_gan_nhat
-1,Liverpool,38,25,9,4,86,41,45,84,W-L-D-L-D
-2,Arsenal,38,20,14,4,69,34,35,74,D-L-D-W-W
-3,Man City,38,21,8,9,72,44,28,71,W-W-D-W-W
-4,Chelsea,38,20,9,9,64,43,21,69,W-W-L-W-W
-5,Newcastle,38,20,6,12,68,47,21,66,W-D-W-L-L
-6,Aston Villa,38,19,9,10,58,51,7,66,L-W-W-W-L
-7,Nottm Forest,38,19,8,11,58,46,12,65,L-D-D-W-L
-8,Brighton,38,16,13,9,66,59,7,61,W-D-W-W-W
-9,Bournemouth,38,15,11,12,58,46,12,56,D-W-L-L-W
-10,Brentford,38,16,8,14,66,57,9,56,W-W-W-L-D
-11,Fulham,38,15,9,14,54,54,0,54,W-L-W-W-L
-12,Crystal Palace,38,13,14,11,51,51,0,53,D-D-W-W-D
-13,Everton,38,11,15,12,42,44,-2,48,L-D-W-W-W
-14,West Ham,38,11,10,17,46,62,-16,43,L-D-W-L-W
-15,Man Utd,38,11,9,18,44,54,-10,42,D-L-L-L-W
-16,Wolves,38,12,6,20,54,69,-15,42,W-L-W-L-D
-17,Tottenham,38,11,5,22,64,65,-1,38,L-D-L-L-L
-18,Leicester,38,6,7,25,33,80,-47,25,L-W-D-W-L
-19,Ipswich Town,38,4,10,24,36,82,-46,22,L-D-L-L-L
-20,Southampton,38,2,6,30,26,86,-60,12,L-L-D-L-L
+1,Arsenal,24,16,5,3,46,17,29,53,W-D-D-L-W
+2,Man City,23,14,4,5,47,21,26,46,D-D-D-L-W
+3,Aston Villa,23,14,4,5,35,25,10,46,L-W-D-L-W
+4,Chelsea,24,11,7,6,42,27,15,40,D-L-W-W-W
+5,Liverpool,24,11,6,7,39,33,6,39,D-D-D-L-W
+6,Man Utd,23,10,8,5,41,34,7,38,D-D-D-W-W
+7,Fulham,23,10,4,9,32,32,0,34,D-D-W-L-W
+8,Everton,24,9,7,8,26,27,-1,34,L-D-W-D-D
+9,Brentford,23,10,3,10,35,32,3,33,D-W-W-L-L
+10,Newcastle,24,9,6,9,33,33,0,33,W-W-D-L-L
+11,Sunderland,23,8,9,6,24,26,-2,33,D-D-L-W-L
+12,Bournemouth,24,8,9,7,40,43,-3,33,L-W-D-W-W
+13,Brighton,24,7,10,7,34,32,2,31,W-D-D-L-D
+14,Tottenham,23,7,7,9,33,31,2,28,D-D-L-L-D
+15,Crystal Palace,23,7,7,9,24,28,-4,28,D-L-D-L-L
+16,Leeds,24,6,8,10,31,42,-11,26,D-L-W-D-L
+17,Nottm Forest,23,7,4,12,23,34,-11,25,L-L-W-D-W
+18,West Ham,24,5,5,14,29,48,-19,20,L-L-W-D-L
+19,Burnley,23,3,6,14,25,44,-19,15,L-L-D-D-D
+20,Wolves,24,1,5,18,15,45,-30,8,W-D-D-L-L
