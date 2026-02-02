@@ -1,4 +1,8 @@
 import csv
+def KhungBang():
+    print("-"*103)
+    print(f"| {'Hạng':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
+    print("-"*103)
 
 #=======================================================================
 def ChucNang1():
@@ -517,8 +521,7 @@ def ChucNang8():
             print("Nhập không có trong Menu vui lòng nhập lại")
 
 # hàm chính của dự án
-with open("dulieu.txt","r",newline="",encoding="UTF-8") as f:
-    content=csv.DictReader(f)
+def main():
     while True:
         print("===== PREMIER LEAGUE ANALYSIS SYSTEM =====")
         print("1.Xem dữ liệu giải đấu")
@@ -552,4 +555,6 @@ with open("dulieu.txt","r",newline="",encoding="UTF-8") as f:
         else:
             print("Chọn không đúng giá trị chọn lại")
 
+#============================================================================
+main()
     
