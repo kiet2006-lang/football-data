@@ -560,59 +560,6 @@ def ChucNang6():
 def ChucNang7():
     while True:
         print("===== Chọn chức năng chi tiết =====")
-        print("6.1 Dự đoán thắng / hòa / thua")
-        print("6.2 Tính chỉ số sức mạnh (Power Score)")
-        print("6.3 Giải thích lý do dự đoán")
-        print("6.4 Đánh giá độ tin cậy dự đoán")
-        print("0. Thoát")
-        choice=float(input("Chọn: "))
-        if choice==6.1:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.2:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.3:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.4:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==0:
-            return
-        else:
-            print("Nhập không có trong Menu vui lòng nhập lại")
-
-def ChucNang7():
-    while True:
-        print("===== Chọn chức năng chi tiết =====")
         print("7.1 Đội ghi bàn vượt trội")
         print("7.2 Đội thủng lưới bất thường")
         print("7.3 Đội có hiệu suất kém so với điểm số")
