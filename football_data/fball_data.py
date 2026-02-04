@@ -13,191 +13,281 @@ def ToanBoBang():
             print("-"*122)
 
 def ThongTinCuThe1DoiBong():
-    while True:
-        print("1.Arsenal")
-        print("2.Man City")
-        print("3.Aston")
-        print("4.Chelsea")
-        print("5.Liverpool")
-        print("6.Man Utd")
-        print("7.Fulham")
-        print("8.Everton")
-        print("9.Brentford")
-        print("10.Newcastle")
-        print("11.Sunderland")
-        print("12.Bournemouth")
-        print("13.Brighton")
-        print("14.Tottenham")
-        print("15.Crystal Palace")
-        print("16.Leeds")
-        print("17.Nottm Forest")
-        print("18.West Ham")
-        print("19.Burnley")
-        print("20.Wolves")
-        choice=int(input("Chọn: "))
-        if choice==1:
-            with open("football_data/arsenal.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
+    try:
+        while True:
+            print("1.Arsenal")
+            print("2.Man City")
+            print("3.Aston")
+            print("4.Chelsea")
+            print("5.Liverpool")
+            print("6.Man Utd")
+            print("7.Fulham")
+            print("8.Everton")
+            print("9.Brentford")
+            print("10.Newcastle")
+            print("11.Sunderland")
+            print("12.Bournemouth")
+            print("13.Brighton")
+            print("14.Tottenham")
+            print("15.Crystal Palace")
+            print("16.Leeds")
+            print("17.Nottm Forest")
+            print("18.West Ham")
+            print("19.Burnley")
+            print("20.Wolves")
+            choice=int(input("Chọn: "))
+            if choice==1:
+                with open("football_data/arsenal.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==2:
+                with open("football_data/mancity.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==3:
+                with open("football_data/aston.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==4:
+                with open("football_data/chelsea.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==5:
+                with open("football_data/chelsea.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==6:
+                with open("football_data/manutd.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==7:
+                with open("football_data/fulham.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==8:
+                with open("football_data/everton.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
                 print("----------------------------------------------------------------------------------------------------")
                 for i in content:
                     print(i,end="")
                 print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==2:
-            with open("football_data/mancity.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
+                return
+            elif choice==9:
+                with open("football_data/brentford.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==10:
+                with open("football_data/newcastle.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
                 print("----------------------------------------------------------------------------------------------------")
                 for i in content:
                     print(i,end="")
                 print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==11:
+                with open("football_data/sunderland.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==12:
+                with open("football_data/bournemouth.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==13:
+                with open("football_data/brighton.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==14:
+                with open("football_data/tottenham.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==15:
+                with open("football_data/crystal_palace.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==16:
+                with open("football_data/leeds.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==17:
+                with open("football_data/nottm_forest.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==18:
+                with open("football_data/west_ham.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==19:
+                with open("football_data/burnley.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            elif choice==20:
+                with open("football_data/wolves.txt","r",newline="",encoding="UTF-8") as f:
+                    content=f.readlines()
+                    print("----------------------------------------------------------------------------------------------------")
+                    for i in content:
+                        print(i,end="")
+                    print("----------------------------------------------------------------------------------------------------")
+                return
+            else:
+                print("Nhập kí tự không đúng nhập lạiN!")
+    except ValueError:
+        print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
+        return
+
+def TimDoiTheoTen():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        try:
+            n=input("Nhập tên đội bóng: ")
+            for i in content:                                               
+                if n==i["Câu lạc bộ"]:
+                    print(f"Câu lạc bộ: {i["Câu lạc bộ"]}")
+                    print(f"Số trận: {i['ST']}")
+                    print(f"Số trận thắng: {i["T"]}")
+                    print(f"Số trận hòa: {i['H']}")
+                    print(f"Số trận thua: {i["B"]}")
+                    print(f"Số bàn thắng: {i["BT"]}")
+                    print(f"Số bàn thua: {i["BB"]}")
+                    print(f"Hiệu số: {i["HS"]}")
+                    print(f"Điểm: {i["Diem"]}")
+                    print(f"5 trận đấu gần nhất: {i["5_tran_gan_nhat"]}")
+        except ValueError:
+            print("Phải nhập giá trị giá trị chuỗi ! Quay về trang chủ")
             return
-        elif choice==3:
-            with open("football_data/aston.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==4:
-            with open("football_data/chelsea.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==5:
-            with open("football_data/chelsea.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==6:
-            with open("football_data/manutd.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==7:
-            with open("football_data/fulham.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==8:
-            with open("football_data/everton.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==9:
-            with open("football_data/brentford.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==10:
-            with open("football_data/newcastle.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==11:
-            with open("football_data/sunderland.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==12:
-            with open("football_data/bournemouth.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==13:
-            with open("football_data/brighton.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==14:
-            with open("football_data/tottenham.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==15:
-            with open("football_data/crystal_palace.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==16:
-            with open("football_data/leeds.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==17:
-            with open("football_data/nottm_forest.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==18:
-            with open("football_data/west_ham.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==19:
-            with open("football_data/burnley.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        elif choice==20:
-            with open("football_data/wolves.txt","r",newline="",encoding="UTF-8") as f:
-                content=f.readlines()
-                print("----------------------------------------------------------------------------------------------------")
-                for i in content:
-                    print(i,end="")
-                print("----------------------------------------------------------------------------------------------------")
-            return
-        else:
-            print("Nhập kí tự không đúng nhập lại!")                                        
-                                             
+        
+def XemDoiGhiBanNhieuNhat():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        ds=list()
+        temp=list()
+        for i in content:         # Hạng,Câu lạc bộ,ST,T,H,B,BT,BB,HS,Diem,5_tran_gan_nhat   
+            temp.append(i["Hạng"])
+            temp.append(i["Câu lạc bộ"])
+            temp.append(i["ST"])
+            temp.append(i["T"])
+            temp.append(i["H"])
+            temp.append(i["B"])
+            temp.append(i["BT"])
+            temp.append(i["BB"])
+            temp.append(i["HS"])
+            temp.append(i["Diem"])
+            temp.append(i["5_tran_gan_nhat"])
+            ds.append(temp)
+            temp=list()
+        lon_nhat=max(ds,key=lambda x:x[6])[6]
+        print("===== Các câu lạc bộ ghi bàn nhiều nhất ở Ngoại Hạng Anh =====")
+        for i in ds:
+            if i[6]==lon_nhat:
+                print(f"Tên câu lạc bộ: {i[1]}")
+                print(f"Số trận tham gia: {i[2]}")
+                print(f"Số trận thắng: {i[3]}")
+                print(f"Số trận hòa: {i[4]}")
+                print(f"Số trận thua: {i[5]}")
+                print(f"Ghi bàn được: {i[6]}")
+                print(f"Vào lưới: {i[7]}")
+                print(f"Hiệu số: {i[8]}")
+                print(f"Điểm: {i[9]}")
+
+def ThungLuoiItNhat():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)                      # Hạng,Câu lạc bộ,ST,T,H,B,BT,BB,HS,Diem,5_tran_gan_nhat 
+        ds=list()
+        temp=list()
+        for i in content:
+            temp.append(i["Hạng"])
+            temp.append(i["Câu lạc bộ"])
+            temp.append(i["ST"])
+            temp.append(i["T"])
+            temp.append(i["H"])
+            temp.append(i["B"])
+            temp.append(i["BT"])
+            temp.append(i["BB"])
+            temp.append(i["HS"])
+            temp.append(i["Diem"])
+            temp.append(i["5_tran_gan_nhat"])
+            ds.append(temp)
+            temp=list()
+        nho_nhat=min(ds,key=lambda x:x[7])[7]
+        print("===== Các câu lạc bộ thủng lưới ít nhất ở Ngoại Hạng Anh =====")
+        for i in ds:
+            if i[7]==nho_nhat:
+                print(f"Tên câu lạc bộ: {i[1]}")
+                print(f"Số trận tham gia: {i[2]}")
+                print(f"Số trận thắng: {i[3]}")
+                print(f"Số trận hòa: {i[4]}")
+                print(f"Số trận thua: {i[5]}")
+                print(f"Ghi bàn đượcL {i[6]}")
+                print(f"Vào lưới: {i[7]}")
+                print(f"Hiệu số: {i[8]}")
+                print(f"Điểm: {i[9]}")
 #=======================================================================
 def ChucNang1():
     while True:
@@ -212,12 +302,12 @@ def ChucNang1():
         if choice==1.1:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=="y":
                     print("Xác nhận thành công")
                     print()
                     ToanBoBang()
                     return
-                elif xacnhan=='N':
+                elif xacnhan=='N' or xacnhan=="n":
                     ChucNang1()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
@@ -225,38 +315,44 @@ def ChucNang1():
         elif choice==1.2:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=="y":
                     print("Xác nhận thành công")
                     ThongTinCuThe1DoiBong()
                     return
-                elif xacnhan=='N':
+                elif xacnhan=='N' or xacnhan=="n":
                     ChucNang1()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==1.3:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' and xacnhan=="y":
                     print("Xác nhận thành công")
-                elif xacnhan=='N':
+                    TimDoiTheoTen()
+                    return
+                elif xacnhan=='N' or xacnhan=="n":
                     ChucNang1()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==1.4:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-                elif xacnhan=='N':
+                    XemDoiGhiBanNhieuNhat()
+                    return
+                elif xacnhan=='N' or xacnhan=="n":
                     ChucNang1()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng nhập lại")
         elif choice==1.5:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-                elif xacnhan=='N':
+                    ThungLuoiItNhat()
+                    return
+                elif xacnhan=='N' or xacnhan=="n":
                     ChucNang1()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng nhập lại")
@@ -264,6 +360,29 @@ def ChucNang1():
             return
         else:
             print("Nhập không có trong Menu vui lòng nhập lại")
+
+#==================================================================================================================
+def TongSoTranDa():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        tong=0
+        for i in content:
+            tong+=int(i["ST"])
+    print(f"Số trận đã đá tại mùa 2025-2026 là: {tong} trận")
+
+def TongSoTranThang_Hoa_Thua():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        tong_thang=0
+        tong_hoa=0
+        tong_thua=0
+        for i in content:
+            tong_thang+=int(i["T"])
+            tong_hoa+=int(i["H"])
+            tong_thua+=int(i['T'])
+        print(f"Tổng số trận thắng là: {tong_thang} trận")
+        print(f"Tổng số trận hòa là: {tong_hoa} trận")
+        print(f"Tổng số trận thua là: {tong_thua} trận")
 
 def ChucNang2():
     while True:
@@ -278,20 +397,22 @@ def ChucNang2():
         if choice==2.1:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    TongSoTranDa()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang2()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==2.2:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    TongSoTranThang_Hoa_Thua()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang2()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
