@@ -1,6 +1,6 @@
 import csv
 def KhungBang():
-    print("-"*123)
+    print("-"*122)
     print(f"| {'Hạng':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} | {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
     print("-"*122)
 
@@ -384,6 +384,48 @@ def TongSoTranThang_Hoa_Thua():
         print(f"Tổng số trận hòa là: {tong_hoa} trận")
         print(f"Tổng số trận thua là: {tong_thua} trận")
 
+def HieuSoBanThang():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        print("===== BẢNG HIỆU SỐ CỦA CÁC CÂU LẠC BỘ NGOẠI HẠNG ANH =====")
+        for i in content:
+            if i['HS'][0]=='-':
+                print(f"{i['Câu lạc bộ']:<15} : {i['HS']:<4}")
+            else:
+                print(f"{i['Câu lạc bộ']:<15} : +{i['HS']:<3}")
+
+def DiemTrungBinhMoiTran():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        print("===== BẢNG TRUNG BÌNH MỖI TRẬN CỦA CÁC CÂU LẠC BỘ NGOẠI HẠNG ANH =====")
+        print()
+        print("-"*48)
+        print(f"| {'Câu lạc bộ':<15} | {'Điểm trung bình mỗi trận':<25} |")
+        print("-"*48)
+        for i in content:
+            print(f"| {i['Câu lạc bộ']:<15} | {str(round(float(i['Diem'])/float(i['ST']),2)):<25} |")
+            print("-"*48)
+
+def DanhGiaTungDoiBong():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        print("===== BẢNG ĐÁNH GIÁ TỪNG ĐỘI BÓNG =====")
+        print()
+        print("-"*40)
+        print(f"| {'Câu lạc bộ':<15} | {'Đánh giá':<20} |")
+        print("-"*40)
+        for i in content:
+            danh_gia=""
+            if (float(i['Diem'])/float(i['ST']))>1.5 and float(i['HS'])>0:
+                danh_gia+="Đội bóng mạnh"
+            elif (float(i['Diem'])/float(i['ST']))>1 and float(i['HS'])>0:
+                danh_gia+="Đội bóng khá"
+            elif (float(i['Diem'])/float(i['ST']))<0.5 and float(i['HS'])<0:
+                danh_gia+="Đội bóng yếu"
+            else:
+                danh_gia+="Đội bóng tầm trung"
+            print(f"| {i['Câu lạc bộ']:<15} | {danh_gia:<20} |")
+            print("-"*40)
 def ChucNang2():
     while True:
         print("===== Chọn chức năng chi tiết =====")
@@ -419,30 +461,33 @@ def ChucNang2():
         elif choice==2.3:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    HieuSoBanThang()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang2()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==2.4:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    DiemTrungBinhMoiTran()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang2()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==2.5:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    DanhGiaTungDoiBong()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang2()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
@@ -451,6 +496,140 @@ def ChucNang2():
         else:
             print("Nhập không có trong Menu vui lòng nhập lại")
 
+#==================================================================================================================
+def Top4():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        cnt=0
+        print(" "*35+"===== TOP 4 CÂU LẠC BỘ NGOẠI HẠNG ANH =====")
+        print("-"*122)
+        print(f"| {'Top':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} | {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
+        print("-"*122)
+        for i in content:
+            cnt+=1
+            print(f"| {cnt:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |")
+            print("-"*122)
+            if cnt==4:
+                break
+        print()
+
+def Top6():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        cnt=0
+        print(" "*25+"===== TOP 6 CÂU LẠC BỘ NGOẠI HẠNG ANH TRANH CÚP CHÂU ÂU =====")
+        print("-"*122)
+        print(f"| {'Top':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} | {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
+        print("-"*122)
+        for i in content:
+            cnt+=1
+            print(f"| {cnt:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |")
+            print("-"*122)
+            if cnt==6:
+                break
+
+def GiuaBang():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        cnt=0
+        print(" "*25+"===== NHÓM GIỮA BẢNG CỦA CÂU LẠC BỘ NGOẠI HẠNG ANH TRANH CÚP CHÂU ÂU =====")
+        print("-"*122)
+        print(f"| {'Top':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} | {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
+        print("-"*122)
+        for i in content:
+            cnt+=1
+            if cnt>=8:
+                print(f"| {cnt:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |")
+                print("-"*122)
+            if cnt==15:
+                break
+def TruHang():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        cnt=0
+        print(" "*25+"===== NHÓM TRỤ HẠNG CÂU LẠC BỘ NGOẠI HẠNG ANH TRANH CÚP CHÂU ÂU =====")
+        print("-"*122)
+        print(f"| {'Top':<5} | {'Câu lạc bộ':<15} | {'Số trận':<8} | {'Thắng':<6} | {'Hòa':<4} | {'Thua':<5} | {'Bàn thắng':<10} | {'Bàn thua':<10} | {'Hiệu số':<8} | {'5 trận đấu gần nhất':<20} |")
+        print("-"*122)
+        for i in content:
+            cnt+=1
+            if cnt>=16:
+                print(f"| {cnt:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |")
+                print("-"*122)
+
+def DuDoanDoiVoDich():
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        ds=list()
+        temp=list()
+        for i in content:
+            temp.append(i["Hạng"])
+            temp.append(i["Câu lạc bộ"])
+            temp.append(i["ST"])
+            temp.append(i["T"])
+            temp.append(i["H"])
+            temp.append(i["B"])
+            temp.append(i["BT"])
+            temp.append(i["BB"])
+            temp.append(i["HS"])
+            temp.append(i["Diem"])
+            temp.append(i["5_tran_gan_nhat"])
+            ds.append(temp)
+            temp=list()
+        tong_hs=list()
+        tong_tbd=list()
+        ds=sorted(ds,key=lambda x:x[8])
+        cnt=20
+        for i in ds:
+            tong_hs.append([i[1],cnt])
+            cnt-=1
+        ds=sorted(ds,key=lambda x:float(x[9])/float(x[2]))
+        cnt=20
+        for i in ds:
+            tong_tbd.append([i[1],cnt])
+            cnt-=1
+        diem=list()
+        for i in tong_hs:
+            if i[0]=='Arsenal':
+                diem[0]+=i[1]
+            elif i[0]=='Man City':
+                diem[1]+=i[1]
+            elif i[0]=='Aston Villa':
+                diem[2]+=i[1]
+            elif i[0]=='Chelsea':
+                diem[3]+=i[1]
+            elif i[0]=='Liverpool':
+                diem[4]+=i[1]
+            elif i[0]=='Man Utd':
+                diem[5]+=i[1]
+            elif i[0]=='Fulham':
+                diem[6]+=i[1]
+            elif i[0]=='Everton':
+                diem[7]+=i[1]
+            elif i[0]=='Brentford':
+                diem[8]+=i[1]
+            elif i[0]=='Newcastle':
+                diem[9]+=i[1]
+            elif i[0]=='Sunderland':
+                diem[10]+=i[1]
+            elif i[0]=='Bournemouth':
+                diem[11]+=i[1]
+            elif i[0]=='Brighton':
+                diem[12]+=i[1]
+            elif i[0]=='Tottenham':
+                diem[13]+=i[1]
+            elif i[0]=='Man City':
+                diem[14]+=i[1]
+            elif i[0]=='Man City':
+                diem[15]+=i[1]
+            elif i[0]=='Man City':
+                diem[16]+=i[1]
+            elif i[0]=='Man City':
+                diem[17]+=i[1]
+            elif i[0]=='Man City':
+                diem[18]+=i[1]
+            else:
+                diem[19]+=i[1]
 def ChucNang3():
     while True:
         print("===== Chọn chức năng chi tiết =====")
@@ -464,50 +643,55 @@ def ChucNang3():
         if choice==3.1:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    Top4()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang3()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==3.2:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    Top6()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang3()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==3.3:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    GiuaBang()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang3()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==3.4:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    TruHang()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang3()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
         elif choice==3.5:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    DuDoanDoiVoDich()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang3()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
