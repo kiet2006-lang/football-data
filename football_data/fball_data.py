@@ -578,58 +578,22 @@ def DuDoanDoiVoDich():
             temp=list()
         tong_hs=list()
         tong_tbd=list()
-        ds=sorted(ds,key=lambda x:x[8])
+        ds=sorted(ds,key=lambda x:int(x[8]),reverse=True)
         cnt=20
         for i in ds:
             tong_hs.append([i[1],cnt])
             cnt-=1
-        ds=sorted(ds,key=lambda x:float(x[9])/float(x[2]))
+        ds=sorted(ds,key=lambda x: float(x[9])/float(x[2]),reverse=True)  
+        # x[9] là điểm và x[2] là số trận -> tính ra điểm trung bình mỗi trận thi đấu
         cnt=20
         for i in ds:
             tong_tbd.append([i[1],cnt])
             cnt-=1
-        diem=list()
-        for i in tong_hs:
-            if i[0]=='Arsenal':
-                diem[0]+=i[1]
-            elif i[0]=='Man City':
-                diem[1]+=i[1]
-            elif i[0]=='Aston Villa':
-                diem[2]+=i[1]
-            elif i[0]=='Chelsea':
-                diem[3]+=i[1]
-            elif i[0]=='Liverpool':
-                diem[4]+=i[1]
-            elif i[0]=='Man Utd':
-                diem[5]+=i[1]
-            elif i[0]=='Fulham':
-                diem[6]+=i[1]
-            elif i[0]=='Everton':
-                diem[7]+=i[1]
-            elif i[0]=='Brentford':
-                diem[8]+=i[1]
-            elif i[0]=='Newcastle':
-                diem[9]+=i[1]
-            elif i[0]=='Sunderland':
-                diem[10]+=i[1]
-            elif i[0]=='Bournemouth':
-                diem[11]+=i[1]
-            elif i[0]=='Brighton':
-                diem[12]+=i[1]
-            elif i[0]=='Tottenham':
-                diem[13]+=i[1]
-            elif i[0]=='Man City':
-                diem[14]+=i[1]
-            elif i[0]=='Man City':
-                diem[15]+=i[1]
-            elif i[0]=='Man City':
-                diem[16]+=i[1]
-            elif i[0]=='Man City':
-                diem[17]+=i[1]
-            elif i[0]=='Man City':
-                diem[18]+=i[1]
-            else:
-                diem[19]+=i[1]
+        bxh=list()
+        for i,j in zip(tong_hs,tong_tbd):
+            bxh.append([i[0],i[1]+j[1]])
+        bxh=sorted(bxh,key=lambda x: x[1],reverse=True)
+        print(f"4 đội có khả năng vô địch: {bxh[0][0]},{bxh[1][0]},{bxh[2][0]},{bxh[3][0]}")
 def ChucNang3():
     while True:
         print("===== Chọn chức năng chi tiết =====")
