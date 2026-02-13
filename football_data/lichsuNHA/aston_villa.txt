@@ -1,0 +1,27 @@
+Vòng,Ngày,Đối thủ,Kết quả,Tỷ số
+1,16/08/25,Newcastle (Nhà),Hòa,0 - 0
+2,23/08/25,Burnley (Khách),Thắng,2 - 1
+3,31/08/25,Crystal Palace (Nhà),Thua,0 - 3
+4,13/09/25,Brighton (Khách),Thắng,1 - 0
+5,20/09/25,Everton (Khách),Thắng,2 - 0
+6,27/09/25,Sunderland (Nhà),Thắng,3 - 1
+7,04/10/25,Leeds United (Khách),Hòa,1 - 1
+8,18/10/25,Wolves (Nhà),Thắng,2 - 1
+9,26/10/25,Man City (Nhà),Thắng,1 - 0
+10,01/11/25,Bournemouth (Nhà),Thắng,2 - 1
+11,08/11/25,Fulham (Khách),Hòa,2 - 2
+12,22/11/25,Tottenham (Khách),Thắng,1 - 0
+13,29/11/25,Brentford (Khách),Thắng,2 - 1
+14,03/12/25,West Ham (Nhà),Hòa,1 - 1
+15,06/12/25,Arsenal (Nhà),Thắng,2 - 1
+16,14/12/25,Liverpool (Khách),Thua,0 - 2
+17,21/12/25,Man Utd (Nhà),Thắng,2 - 1
+18,27/12/25,Chelsea (Khách),Thắng,2 - 1
+19,30/12/25,Arsenal (Khách),Thua,1 - 4
+20,03/01/26,Nottm Forest (Nhà),Thắng,3 - 1
+21,10/01/26,Crystal Palace (Khách),Thắng,1 - 0
+22,18/01/26,Everton (Nhà),Thua,0 - 1
+23,25/01/26,Newcastle (Khách),Thua,0 - 2
+24,01/02/26,Brentford (Nhà),Thua,0 - 1
+25,07/02/26,Bournemouth (Khách),Hòa,1 - 1
+26,12/02/26,Brighton (Nhà),Thắng,1 - 0
