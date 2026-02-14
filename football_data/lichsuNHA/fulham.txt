@@ -1,0 +1,27 @@
+Vòng,Ngày,Đối thủ,Kết quả,Tỷ số
+1,16/08/25,Brentford (Nhà),Thua,1 - 2
+2,23/08/25,Wolves (Khách),Thắng,2 - 0
+3,30/08/25,Man Utd (Nhà),Hòa,1 - 1
+4,13/09/25,West Ham (Nhà),Thắng,3 - 1
+5,21/09/25,Newcastle (Nhà),Thắng,2 - 1
+6,28/09/25,Burnley (Khách),Thắng,2 - 0
+7,04/10/25,Aston Villa (Nhà),Hòa,2 - 2
+8,19/10/25,Brighton (Nhà),Thua,0 - 2
+9,26/10/25,Everton (Nhà),Thua,1 - 2
+10,02/11/25,Liverpool (Khách),Thua,1 - 3
+11,09/11/25,Crystal Palace (Khách),Thắng,2 - 0
+12,22/11/25,Sunderland (Nhà),Thắng,1 - 0
+13,30/11/25,Tottenham (Khách),Thua,0 - 1
+14,02/12/25,Man City (Nhà),Thắng,5 - 4
+15,07/12/25,Arsenal (Nhà),Thua,1 - 2
+16,14/12/25,Nottm Forest (Khách),Hòa,1 - 1
+17,21/12/25,Leeds United (Khách),Thắng,2 - 1
+18,26/12/25,Bournemouth (Nhà),Hòa,2 - 2
+19,01/01/26,Chelsea (Khách),Thắng,2 - 1
+20,08/01/26,Chelsea (Khách),Thắng,2 - 1
+21,11/01/26,Crystal Palace (Nhà),Thua,0 - 1
+22,17/01/26,Brighton (Khách),Thua,1 - 2
+23,25/01/26,Man Utd (Khách),Thua,2 - 3
+24,31/01/26,Nottm Forest (Nhà),Thắng,2 - 0
+25,07/02/26,Everton (Khách),Thua,1 - 2
+26,11/02/26,Man City (Khách),Thua,0 - 3

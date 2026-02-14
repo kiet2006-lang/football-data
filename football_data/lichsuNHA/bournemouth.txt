@@ -1,0 +1,27 @@
+Vòng,Ngày,Đối thủ,Kết quả,Tỷ số
+1,15/08/25,Liverpool (Khách),Thua,2 - 4
+2,23/08/25,Newcastle (Nhà),Hòa,1 - 1
+3,31/08/25,Everton (Khách),Thua,1 - 2
+4,14/09/25,Brentford (Khách),Thắng,2 - 1
+5,20/09/25,Brighton (Nhà),Thắng,3 - 2
+6,27/09/25,Burnley (Khách),Hòa,1 - 1
+7,04/10/25,Man Utd (Khách),Thua,0 - 3
+8,18/10/25,Nottm Forest (Nhà),Thắng,2 - 0
+9,25/10/25,Arsenal (Khách),Thua,1 - 3
+10,01/11/25,Aston Villa (Khách),Thua,1 - 2
+11,08/11/25,Wolves (Nhà),Hòa,2 - 2
+12,23/11/25,Man City (Nhà),Thua,1 - 2
+13,29/11/25,Sunderland (Khách),Hòa,1 - 1
+14,02/12/25,Tottenham (Nhà),Hòa,2 - 2
+15,07/12/25,Chelsea (Nhà),Thua,1 - 2
+16,13/12/25,West Ham (Khách),Thắng,2 - 1
+17,20/12/25,Crystal Palace (Nhà),Thắng,2 - 1
+18,26/12/25,Fulham (Khách),Hòa,2 - 2
+19,01/01/26,Leeds United (Nhà),Hòa,3 - 3
+20,04/01/26,Everton (Nhà),Thua,1 - 2
+21,10/01/26,Brentford (Nhà),Thắng,2 - 1
+22,17/01/26,Brighton (Khách),Hòa,2 - 2
+23,24/01/26,Liverpool (Nhà),Thắng,3 - 2
+24,31/01/26,Newcastle (Khách),Hòa,1 - 1
+25,07/02/26,Aston Villa (Nhà),Hòa,1 - 1
+26,12/02/26,Sunderland (Nhà),Thắng,2 - 0

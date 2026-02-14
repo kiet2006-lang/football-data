@@ -1,0 +1,27 @@
+Vòng,Ngày,Đối thủ,Kết quả,Tỷ số
+1,16/08/25,Burnley (Nhà),Thắng,3 - 0
+2,23/08/25,Man City (Khách),Thắng,2 - 0
+3,30/08/25,Bournemouth (Nhà),Thua,0 - 1
+4,13/09/25,West Ham (Khách),Thắng,3 - 0
+5,20/09/25,Brighton (Khách),Hòa,2 - 2
+6,27/09/25,Wolves (Nhà),Hòa,1 - 1
+7,04/10/25,Leeds United (Khách),Thắng,2 - 1
+8,19/10/25,Aston Villa (Nhà),Thua,1 - 2
+9,26/10/25,Everton (Khách),Thắng,3 - 0
+10,01/11/25,Chelsea (Nhà),Thua,0 - 1
+11,08/11/25,Man Utd (Nhà),Hòa,2 - 2
+12,23/11/25,Arsenal (Khách),Thua,1 - 4
+13,29/11/25,Fulham (Nhà),Thua,1 - 2
+14,02/12/25,Newcastle (Khách),Hòa,2 - 2
+15,06/12/25,Brentford (Nhà),Thắng,2 - 0
+16,14/12/25,Nottm Forest (Khách),Thua,0 - 3
+17,20/12/25,Liverpool (Nhà),Thua,1 - 2
+18,28/12/25,Crystal Palace (Khách),Thua,0 - 1
+19,01/01/26,Brentford (Khách),Hòa,0 - 0
+20,04/01/26,Sunderland (Nhà),Hòa,1 - 1
+21,07/01/26,Bournemouth (Khách),Thắng,3 - 2
+22,17/01/26,West Ham (Nhà),Thua,1 - 2
+23,24/01/26,Burnley (Khách),Hòa,2 - 2
+24,01/02/26,Man City (Nhà),Hòa,2 - 2
+25,07/02/26,Man Utd (Khách),Thua,0 - 2
+26,10/02/26,Newcastle (Nhà),Thua,1 - 2
