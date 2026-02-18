@@ -1432,6 +1432,237 @@ def SoSanhPhongDo():
     except ValueError:
         print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
         return
+def DanhGiaDoiManhHon():
+    try:
+        thu_nhat=""
+        thu_hai=""
+        while True:
+            print("1.Arsenal")
+            print("2.Man City")
+            print("3.Aston")
+            print("4.Chelsea")
+            print("5.Liverpool")
+            print("6.Man Utd")
+            print("7.Fulham")
+            print("8.Everton")
+            print("9.Brentford")
+            print("10.Newcastle")
+            print("11.Sunderland")
+            print("12.Bournemouth")
+            print("13.Brighton")
+            print("14.Tottenham")
+            print("15.Crystal Palace")
+            print("16.Leeds")
+            print("17.Nottm Forest")
+            print("18.West Ham")
+            print("19.Burnley")
+            print("20.Wolves")
+            choice=int(input("Chọn đội định so sánh thứ nhất: "))
+            if choice==1:
+                thu_nhat+="Arsenal"
+                break
+            elif choice==2:
+                thu_nhat+="Man City"
+                break
+            elif choice==3:
+                thu_nhat+="Aston"
+                break
+            elif choice==4:
+                thu_nhat+="Chelsea"
+                break
+            elif choice==5:
+                thu_nhat+="Liverpool"
+                break
+            elif choice==6:
+                thu_nhat+="Man Utd"
+                break
+            elif choice==7:
+                thu_nhat+="Fulham"
+                break
+            elif choice==8:
+                thu_nhat+="Everton"
+                break
+            elif choice==9:
+                thu_nhat+="Brentford"
+                break
+            elif choice==10:
+                thu_nhat+="Newcastle"
+                break
+            elif choice==11:
+                thu_nhat+="Sunderland"
+                break
+            elif choice==12:
+                thu_nhat+="Bournemouth"
+                break
+            elif choice==13:
+                thu_nhat+="Brighton"
+                break
+            elif choice==14:
+                thu_nhat+="Tottenham"
+                break
+            elif choice==15:
+                thu_nhat+="Crystal Palace"
+                break
+            elif choice==16:
+                thu_nhat+="Leeds"
+                break
+            elif choice==17:
+                thu_nhat+="Nottm Forest"
+                break
+            elif choice==18:
+                thu_nhat+="West Ham"
+                break
+            elif choice==19:
+                thu_nhat+="Burnley"
+                break
+            elif choice==20:
+                thu_nhat+="Wolves"
+                break
+            else:
+                print("Nhập kí tự không đúng nhập lại!")
+
+        while True:
+            print("1.Arsenal")
+            print("2.Man City")
+            print("3.Aston")
+            print("4.Chelsea")
+            print("5.Liverpool")
+            print("6.Man Utd")
+            print("7.Fulham")
+            print("8.Everton")
+            print("9.Brentford")
+            print("10.Newcastle")
+            print("11.Sunderland")
+            print("12.Bournemouth")
+            print("13.Brighton")
+            print("14.Tottenham")
+            print("15.Crystal Palace")
+            print("16.Leeds")
+            print("17.Nottm Forest")
+            print("18.West Ham")
+            print("19.Burnley")
+            print("20.Wolves")
+            choice=int(input("Chọn đội định so sánh thứ hai: "))
+            if choice==1:
+                thu_hai+="Arsenal"
+                break
+            elif choice==2:
+                thu_hai+="Man City"
+                break
+            elif choice==3:
+                thu_hai+="Aston"
+                break
+            elif choice==4:
+                thu_hai+="Chelsea"
+                break
+            elif choice==5:
+                thu_hai+="Liverpool"
+                break
+            elif choice==6:
+                thu_hai+="Man Utd"
+                break
+            elif choice==7:
+                thu_hai+="Fulham"
+                break
+            elif choice==8:
+                thu_hai+="Everton"
+                break
+            elif choice==9:
+                thu_hai+="Brentford"
+                break
+            elif choice==10:
+                thu_hai+="Newcastle"
+                break
+            elif choice==11:
+                thu_hai+="Sunderland"
+                break
+            elif choice==12:
+                thu_hai+="Bournemouth"
+                break
+            elif choice==13:
+                thu_hai+="Brighton"
+                break
+            elif choice==14:
+                thu_hai+="Tottenham"
+                break
+            elif choice==15:
+                thu_hai+="Crystal Palace"
+                break
+            elif choice==16:
+                thu_hai+="Leeds"
+                break
+            elif choice==17:
+                thu_hai+="Nottm Forest"
+                break
+            elif choice==18:
+                thu_hai+="West Ham"
+                break
+            elif choice==19:
+                thu_hai+="Burnley"
+                break
+            elif choice==20:
+                thu_hai+="Wolves"
+                break
+            else:
+                print("Nhập kí tự không đúng nhập lại!")
+            if thu_nhat==thu_hai:
+                print("Chọn hai đội trùng nhau!")
+                return
+        with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+            content=csv.DictReader(f)
+            tt1=list()
+            tt2=list()
+            danhgia1=0
+            danhgia2=0
+            for i in content:
+                sum=0
+                if i["Câu lạc bộ"]==thu_nhat:
+                    tt1.append(i["Câu lạc bộ"])
+                    tt1.append(i['Diem'])
+                    tt1.append(i['BT'])
+                    for j in i["5_tran_gan_nhat"]:
+                        if j=="W":
+                            sum+=3
+                        if j=="D":
+                            sum+=1
+                    tt1.append(sum)
+                if i["Câu lạc bộ"]==thu_hai:
+                    tt2.append(i["Câu lạc bộ"])
+                    tt2.append(i['Diem'])
+                    tt2.append(i['BT'])
+                    for j in i["5_tran_gan_nhat"]:
+                        if j=="W":
+                            sum+=3
+                        if j=="D":
+                            sum+=1
+                    tt2.append(sum)
+            print(f"Câu lạc bộ thứ nhất: {tt1[0]}")
+            print(f"Điểm: {tt1[1]}")
+            print(f"Hiệu số bàn thắng: {tt1[2]}")
+            print(f"Điểm phong độ: {tt1[3]}")
+            print(f"Câu lạc bộ thứ 2: {tt2[0]}")
+            print(f"Điểm: {tt2[1]}")
+            print(f"Hiệu số bàn thắng: {tt2[2]}")
+            print(f"Điểm phong độ: {tt2[3]}")
+            if int(tt1[1]) > int(tt2[1]):
+                danhgia1+=1
+            elif int(tt1[1]) < int(tt2[1]):
+                danhgia2+=1
+            if int(tt1[2]) > int(tt2[2]):
+                danhgia1+=1
+            elif int(tt1[2]) < int(tt2[2]):
+                danhgia2+=1
+            if int(tt1[3]) > int(tt2[3]):
+                danhgia1+=1
+            elif int(tt1[3]) < int(tt2[3]):
+                danhgia2+=1
+            if danhgia1> danhgia2:
+                print(f"{tt1[0]} mạnh hơn {tt2[0]}")
+            elif danhgia1 < danhgia2:
+                print(f"{tt2[0]} mạnh hơn {tt1[0]}")
+    except ValueError:
+        print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
+        return
 def ChucNang5():
     while True:
         print("===== Chọn chức năng chi tiết =====")
@@ -1477,10 +1708,11 @@ def ChucNang5():
         elif choice==5.4:
             while True:
                 xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
+                if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
-
-                elif xacnhan=='N':
+                    DanhGiaDoiManhHon()
+                    return
+                elif xacnhan=='N' or xacnhan=='n':
                     ChucNang5()
                 else:
                     print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
