@@ -1208,12 +1208,12 @@ def SoSanhHieuSoBanThang():
                     tt2.append(i["Diem"])
                     tt2.append(i["5_tran_gan_nhat"])
             print(f"Câu lạc bộ thứ nhất: {tt1[1]}")
-            print(f"Hiệu số bàn thắng: {tt1[7]}")
+            print(f"Hiệu số bàn thắng: {tt1[6]}")
             print(f"Câu lạc bộ thứ 2: {tt2[1]}")
-            print(f"Hiệu số bàn thắng: {tt2[7]}")
-            if int(tt1[7]) > int(tt2[7]):
+            print(f"Hiệu số bàn thắng: {tt2[6]}")
+            if int(tt1[6]) > int(tt2[6]):
                 print(f"Câu lạc bộ {tt1[1]} có hiệu số bàn thắng lớn hơn {tt2[1]}")
-            elif int(tt1[7]) < int(tt2[7]):
+            elif int(tt1[6]) < int(tt2[6]):
                 print(f"Câu lạc bộ {tt2[1]} có hiệu số bàn thắng lớn hơn {tt1[1]}")
             else:
                 print("Hai câu lạc bộ có hiệu số bàn thắng bằng nhau")
@@ -1721,60 +1721,327 @@ def ChucNang5():
         else:
             print("Nhập không có trong Menu vui lòng nhập lại")
 
-def ChucNang6():
-    while True:
-        print("===== Chọn chức năng chi tiết =====")
-        print("6.1 Dự đoán thắng / hòa / thua")
-        print("6.2 Tính chỉ số sức mạnh (Power Score)")
-        print("6.3 Giải thích lý do dự đoán")
-        print("6.4 Đánh giá độ tin cậy dự đoán")
-        print("0. Thoát")
-        choice=float(input("Chọn: "))
-        if choice==6.1:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.2:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.3:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==6.4:
-            while True:
-                xacnhan=input("Xác nhận (Y/N): ")
-                if xacnhan=='Y':
-                    print("Xác nhận thành công")
-
-                elif xacnhan=='N':
-                    ChucNang6()
-                else:
-                    print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
-        elif choice==0:
-            return
+#=======================================================================
+def DuDoanThangHoaThua(a,b):
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        ps1=0
+        ps2=0
+        tt1=list()
+        tt2=list()
+        for i in content:
+            if i['Câu lạc bộ']==a:
+                tt1.append('Diem')
+                tt1.append(i['HS'])
+                tt1.append(i['5_tran_gan_nhat'])
+            if i['Câu lạc bộ']==b:
+                tt2.append(i['Diem'])
+                tt2.append(i['HS'])
+                tt2.append(i['5_tran_gan_nhat'])
+        # kiểm tra chuỗi phong độ 5 trận gần đây của 2 đội
+        chuoi_win1=0
+        chuoi_win2=0
+        res1=0
+        res2=0
+        for i in tt1[2]:
+            if i=='W':
+                chuoi_win1+=1
+            elif i=='D' or i=='L':
+                chuoi_win1=0
+            if res1<=chuoi_win1:
+                    res1=chuoi_win1
+        for j in tt2[2]:
+            if i=='W':
+                chuoi_win2+=1
+            elif i=='D':
+                chuoi_win2=0
+            if res2<=chuoi_win2:
+                    res2=chuoi_win2
+        print(res1)
+        print(res2)
+        ps1=float(tt1[0])+float(tt1[1])*0.5+res1
+        ps2=float(tt2[0])+float(tt2[1])*0.5+res2
+        # xét kiểm tra đội nào mạnh hơn    
+        if ps1 > ps2:
+            print(f"Câu lạc bộ {a} sẽ thắng câu lạc bộ {b}")
+        elif danhgia1 < danhgia2:
+            print(f"Câu lạc bộ {a} sẽ thua câu lạc bộ {b}")
         else:
-            print("Nhập không có trong Menu vui lòng nhập lại")
+            print(f"Câu lạc bộ {a} sẽ hòa câu lạc bộ {b}")
 
+def TinhChiSoPowerScore(a,b):
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
+        content=csv.DictReader(f)
+        ps1=0
+        ps2=0
+        tt1=list()
+        tt2=list()
+        for i in content:
+            if i['Câu lạc bộ']==a:
+                tt1.append(i['Diem'])
+                tt1.append(i['HS'])
+                tt1.append(i['5_tran_gan_nhat'])
+            if i['Câu lạc bộ']==b:
+                tt2.append(i['Diem'])
+                tt2.append(i['HS'])
+                tt2.append(i['5_tran_gan_nhat'])
+        # kiểm tra chuỗi phong độ 5 trận gần đây của 2 đội
+        sc1=0
+        sc2=0
+        for i in tt1[2]:
+            if i=='W':
+                sc1+=3
+            elif i=='D':
+                sc1+=1
+            else:
+                sc1+=0
+        for j in tt2[2]:
+            if i=='W':
+                sc2+=3
+            elif i=='D':
+                sc2+=1
+            else:
+                sc2+=0
+        ps1=int(tt1[0])*3+int(tt1[1])*2+sc1
+        ps2=int(tt2[0])*3+int(tt2[1])*2+sc2
+        print(f"PowerScore của câu lạc bộ {a} là: {ps1}")
+        print(f"PowerScore của câu lạc bộ {b} là {ps2}")
+def ChucNang6():
+    try:
+        thu_nhat=""
+        thu_hai=""
+        while True:
+            print("1.Arsenal")
+            print("2.Man City")
+            print("3.Aston")
+            print("4.Chelsea")
+            print("5.Liverpool")
+            print("6.Man Utd")
+            print("7.Fulham")
+            print("8.Everton")
+            print("9.Brentford")
+            print("10.Newcastle")
+            print("11.Sunderland")
+            print("12.Bournemouth")
+            print("13.Brighton")
+            print("14.Tottenham")
+            print("15.Crystal Palace")
+            print("16.Leeds")
+            print("17.Nottm Forest")
+            print("18.West Ham")
+            print("19.Burnley")
+            print("20.Wolves")
+            choice=int(input("Chọn đội định so sánh thứ nhất: "))
+            if choice==1:
+                thu_nhat+="Arsenal"
+                break
+            elif choice==2:
+                thu_nhat+="Man City"
+                break
+            elif choice==3:
+                thu_nhat+="Aston"
+                break
+            elif choice==4:
+                thu_nhat+="Chelsea"
+                break
+            elif choice==5:
+                thu_nhat+="Liverpool"
+                break
+            elif choice==6:
+                thu_nhat+="Man Utd"
+                break
+            elif choice==7:
+                thu_nhat+="Fulham"
+                break
+            elif choice==8:
+                thu_nhat+="Everton"
+                break
+            elif choice==9:
+                thu_nhat+="Brentford"
+                break
+            elif choice==10:
+                thu_nhat+="Newcastle"
+                break
+            elif choice==11:
+                thu_nhat+="Sunderland"
+                break
+            elif choice==12:
+                thu_nhat+="Bournemouth"
+                break
+            elif choice==13:
+                thu_nhat+="Brighton"
+                break
+            elif choice==14:
+                thu_nhat+="Tottenham"
+                break
+            elif choice==15:
+                thu_nhat+="Crystal Palace"
+                break
+            elif choice==16:
+                thu_nhat+="Leeds"
+                break
+            elif choice==17:
+                thu_nhat+="Nottm Forest"
+                break
+            elif choice==18:
+                thu_nhat+="West Ham"
+                break
+            elif choice==19:
+                thu_nhat+="Burnley"
+                break
+            elif choice==20:
+                thu_nhat+="Wolves"
+                break
+            else:
+                print("Nhập kí tự không đúng nhập lại!")
+
+        while True:
+            print("1.Arsenal")
+            print("2.Man City")
+            print("3.Aston")
+            print("4.Chelsea")
+            print("5.Liverpool")
+            print("6.Man Utd")
+            print("7.Fulham")
+            print("8.Everton")
+            print("9.Brentford")
+            print("10.Newcastle")
+            print("11.Sunderland")
+            print("12.Bournemouth")
+            print("13.Brighton")
+            print("14.Tottenham")
+            print("15.Crystal Palace")
+            print("16.Leeds")
+            print("17.Nottm Forest")
+            print("18.West Ham")
+            print("19.Burnley")
+            print("20.Wolves")
+            choice=int(input("Chọn đội định so sánh thứ hai: "))
+            if choice==1:
+                thu_hai+="Arsenal"
+                break
+            elif choice==2:
+                thu_hai+="Man City"
+                break
+            elif choice==3:
+                thu_hai+="Aston"
+                break
+            elif choice==4:
+                thu_hai+="Chelsea"
+                break
+            elif choice==5:
+                thu_hai+="Liverpool"
+                break
+            elif choice==6:
+                thu_hai+="Man Utd"
+                break
+            elif choice==7:
+                thu_hai+="Fulham"
+                break
+            elif choice==8:
+                thu_hai+="Everton"
+                break
+            elif choice==9:
+                thu_hai+="Brentford"
+                break
+            elif choice==10:
+                thu_hai+="Newcastle"
+                break
+            elif choice==11:
+                thu_hai+="Sunderland"
+                break
+            elif choice==12:
+                thu_hai+="Bournemouth"
+                break
+            elif choice==13:
+                thu_hai+="Brighton"
+                break
+            elif choice==14:
+                thu_hai+="Tottenham"
+                break
+            elif choice==15:
+                thu_hai+="Crystal Palace"
+                break
+            elif choice==16:
+                thu_hai+="Leeds"
+                break
+            elif choice==17:
+                thu_hai+="Nottm Forest"
+                break
+            elif choice==18:
+                thu_hai+="West Ham"
+                break
+            elif choice==19:
+                thu_hai+="Burnley"
+                break
+            elif choice==20:
+                thu_hai+="Wolves"
+                break
+            else:
+                print("Nhập kí tự không đúng nhập lại!")
+            if thu_nhat==thu_hai:
+                print("Chọn hai đội trùng nhau!")
+                return
+        while True:
+            print("===== Chọn chức năng chi tiết =====")
+            print("6.1 Dự đoán thắng / hòa / thua")
+            print("6.2 Tính chỉ số sức mạnh (Power Score)")
+            print("6.3 Giải thích lý do dự đoán")
+            print("6.4 Đánh giá độ tin cậy dự đoán")
+            print("0. Thoát")
+            choice=float(input("Chọn: "))
+
+            if choice==6.1:
+                while True:
+                    xacnhan=input("Xác nhận (Y/N): ")
+                    if xacnhan=='Y' or xacnhan=='y':
+                        print("Xác nhận thành công")
+                        DuDoanThangHoaThua(thu_nhat,thu_hai)
+                        return
+                    elif xacnhan=='N' or xacnhan=='n':
+                        ChucNang6()
+                    else:
+                        print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
+            elif choice==6.2:
+                while True:
+                    xacnhan=input("Xác nhận (Y/N): ")
+                    if xacnhan=='Y' or xacnhan=='y':
+                        print("Xác nhận thành công")
+                        TinhChiSoPowerScore(thu_nhat,thu_hai)
+                        return
+                    elif xacnhan=='N' or xacnhan=='n':
+                        ChucNang6()
+                    else:
+                        print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
+            elif choice==6.3:
+                while True:
+                    xacnhan=input("Xác nhận (Y/N): ")
+                    if xacnhan=='Y' or xacnhan=='y':
+                        print("Xác nhận thành công")
+
+                        return
+                    elif xacnhan=='N' or xacnhan=='n':
+                        ChucNang6()
+                    else:
+                        print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
+            elif choice==6.4:
+                while True:
+                    xacnhan=input("Xác nhận (Y/N): ")
+                    if xacnhan=='Y' or xacnhan=='y':
+                        print("Xác nhận thành công")
+
+                    elif xacnhan=='N' or xacnhan=='n':
+                        ChucNang6()
+                    else:
+                        print("Nhập không phải Y hay N! Vui lòng xác nhận lại")
+            elif choice==0:
+                return
+            else:
+                print("Nhập không có trong Menu vui lòng nhập lại")
+    except ValueError:
+        print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
+        return
+    
 def ChucNang7():
     while True:
         print("===== Chọn chức năng chi tiết =====")
@@ -1892,7 +2159,7 @@ def main():
         print("3.Phân tích bảng xếp hạng")
         print("4.Phân tích phong độ (5 trận đấu gần nhất)")
         print("5.So sánh hai đội bóng")
-        print("6.Thống kê & phát hiện bất thường")
+        print("6.Dự đoán kết quả trận đấu")
         print("7.Thống kê & phát hiện bất thường")
         print("8.Báo cáo và xuất dữ liệu")
         print("0.Thoát")
