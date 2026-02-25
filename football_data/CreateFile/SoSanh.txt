@@ -1,0 +1,12 @@
+Câu lạc bộ thứ nhất: Arsenal
+Điểm: 57
+Câu lạc bộ thứ 2: Liverpool
+Điểm: 42
+Câu lạc bộ Arsenal nhiều điểm hơn Liverpool
+
+Câu lạc bộ thứ nhất: Arsenal
+Hiệu số bàn thắng: 50
+Câu lạc bộ thứ 2: Liverpool
+Hiệu số bàn thắng: 41
+Câu lạc bộ Arsenal có hiệu số bàn thắng lớn hơn Liverpool
+

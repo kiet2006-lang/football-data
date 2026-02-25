@@ -11,7 +11,6 @@ def ToanBoBang():
         for i in content:
             print(f"| {i['Hạng']:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |")
             print("-"*122)
-
 def ThongTinCuThe1DoiBong():
     try:
         while True:
@@ -840,6 +839,7 @@ def ChucNang4():
             print("Nhập không có trong Menu vui lòng nhập lại")
 
 #=======================================================================
+lssosanh=[]
 def SoSanhDiemSoHaiDoi():
     try:
         thu_nhat=""
@@ -1044,16 +1044,19 @@ def SoSanhDiemSoHaiDoi():
                     tt2.append(i["HS"])
                     tt2.append(i["Diem"])
                     tt2.append(i["5_tran_gan_nhat"])
-            print(f"Câu lạc bộ thứ nhất: {tt1[1]}")
-            print(f"Điểm: {tt1[9]}")
-            print(f"Câu lạc bộ thứ 2: {tt2[1]}")
-            print(f"Điểm: {tt2[9]}")
+            kq=""
+            kq+=f"Câu lạc bộ thứ nhất: {tt1[1]}"+"\n"
+            kq+=f"Điểm: {tt1[9]}"+"\n"
+            kq+=f"Câu lạc bộ thứ 2: {tt2[1]}"+"\n"
+            kq+=f"Điểm: {tt2[9]}"+"\n"
             if int(tt1[9]) > int(tt2[9]):
-                print(f"Câu lạc bộ {tt1[1]} nhiều điểm hơn {tt2[1]}")
+                kq+=f"Câu lạc bộ {tt1[1]} nhiều điểm hơn {tt2[1]}"+"\n"
             elif int(tt1[9]) < int(tt2[9]):
-                print(f"Câu lạc bộ {tt2[1]} nhiều điểm hơn {tt1[1]}")
+                kq+=f"Câu lạc bộ {tt2[1]} nhiều điểm hơn {tt1[1]}"+"\n"
             else:
-                print("Hai câu lạc bộ có số điểm bằng nhau")
+                kq+="Hai câu lạc bộ có số điểm bằng nhau"+"\n"
+            print(kq)
+            lssosanh.append(kq)
     except ValueError:
         print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
         return
@@ -1263,16 +1266,19 @@ def SoSanhHieuSoBanThang():
                     tt2.append(i["HS"])
                     tt2.append(i["Diem"])
                     tt2.append(i["5_tran_gan_nhat"])
-            print(f"Câu lạc bộ thứ nhất: {tt1[1]}")
-            print(f"Hiệu số bàn thắng: {tt1[6]}")
-            print(f"Câu lạc bộ thứ 2: {tt2[1]}")
-            print(f"Hiệu số bàn thắng: {tt2[6]}")
+            kq=""
+            kq+=f"Câu lạc bộ thứ nhất: {tt1[1]}"+"\n"
+            kq+=f"Hiệu số bàn thắng: {tt1[6]}"+"\n"
+            kq+=f"Câu lạc bộ thứ 2: {tt2[1]}"+"\n"
+            kq+=f"Hiệu số bàn thắng: {tt2[6]}"+"\n"
             if int(tt1[6]) > int(tt2[6]):
-                print(f"Câu lạc bộ {tt1[1]} có hiệu số bàn thắng lớn hơn {tt2[1]}")
+                kq+=f"Câu lạc bộ {tt1[1]} có hiệu số bàn thắng lớn hơn {tt2[1]}"+"\n"
             elif int(tt1[6]) < int(tt2[6]):
-                print(f"Câu lạc bộ {tt2[1]} có hiệu số bàn thắng lớn hơn {tt1[1]}")
+                kq+=f"Câu lạc bộ {tt2[1]} có hiệu số bàn thắng lớn hơn {tt1[1]}"+"\n"
             else:
-                print("Hai câu lạc bộ có hiệu số bàn thắng bằng nhau")
+                kq+="Hai câu lạc bộ có hiệu số bàn thắng bằng nhau"+"\n"
+            print(kq)
+            lssosanh.append(kq)
     except ValueError:
         print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
         return
@@ -1475,16 +1481,19 @@ def SoSanhPhongDo():
                         if j=="D":
                             sum+=1
                     tt2.append(sum)
-            print(f"Câu lạc bộ thứ nhất: {tt1[0]}")
-            print(f"Điểm phong độ: {tt1[1]}")
-            print(f"Câu lạc bộ thứ 2: {tt2[0]}")
-            print(f"Điểm phong độ: {tt2[1]}")
+            kq=""
+            kq+=f"Câu lạc bộ thứ nhất: {tt1[0]}"+"\n"
+            kq+=f"Điểm phong độ: {tt1[1]}"+"\n"
+            kq+=f"Câu lạc bộ thứ 2: {tt2[0]}"+"\n"
+            kq+=f"Điểm phong độ: {tt2[1]}"+"\n"
             if int(tt1[1]) > int(tt2[1]):
-                print(f"Câu lạc bộ {tt1[1]} có hiệu số bàn thắng lớn hơn {tt2[1]}")
+                kq+=f"Câu lạc bộ {tt1[1]} có hiệu số bàn thắng lớn hơn {tt2[1]}"+"\n"
             elif int(tt1[7]) < int(tt2[7]):
-                print(f"Câu lạc bộ {tt2[1]} có hiệu số bàn thắng lớn hơn {tt1[1]}")
+                kq+=f"Câu lạc bộ {tt2[1]} có hiệu số bàn thắng lớn hơn {tt1[1]}"+"\n"
             else:
-                print("Hai câu lạc bộ có hiệu số bàn thắng bằng nhau")
+                kq+="Hai câu lạc bộ có hiệu số bàn thắng bằng nhau"+"\n"
+            print(kq)
+            lssosanh.append(kq)
     except ValueError:
         print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
         return
@@ -1692,14 +1701,15 @@ def DanhGiaDoiManhHon():
                         if j=="D":
                             sum+=1
                     tt2.append(sum)
-            print(f"Câu lạc bộ thứ nhất: {tt1[0]}")
-            print(f"Điểm: {tt1[1]}")
-            print(f"Hiệu số bàn thắng: {tt1[2]}")
-            print(f"Điểm phong độ: {tt1[3]}")
-            print(f"Câu lạc bộ thứ 2: {tt2[0]}")
-            print(f"Điểm: {tt2[1]}")
-            print(f"Hiệu số bàn thắng: {tt2[2]}")
-            print(f"Điểm phong độ: {tt2[3]}")
+            kq=""
+            kq+=f"Câu lạc bộ thứ nhất: {tt1[0]}"+"\n"
+            kq+=f"Điểm: {tt1[1]}"+"\n"
+            kq+=f"Hiệu số bàn thắng: {tt1[2]}"+"\n"
+            kq+=f"Điểm phong độ: {tt1[3]}"+"\n"
+            kq+=f"Câu lạc bộ thứ 2: {tt2[0]}"+"\n"
+            kq+=f"Điểm: {tt2[1]}"+"\n"
+            kq+=f"Hiệu số bàn thắng: {tt2[2]}"+"\n"
+            kq+=f"Điểm phong độ: {tt2[3]}"+"\n"
             if int(tt1[1]) > int(tt2[1]):
                 danhgia1+=1
             elif int(tt1[1]) < int(tt2[1]):
@@ -1713,9 +1723,11 @@ def DanhGiaDoiManhHon():
             elif int(tt1[3]) < int(tt2[3]):
                 danhgia2+=1
             if danhgia1> danhgia2:
-                print(f"{tt1[0]} mạnh hơn {tt2[0]}")
+                kq+=f"{tt1[0]} mạnh hơn {tt2[0]}"+"\n"
             elif danhgia1 < danhgia2:
-                print(f"{tt2[0]} mạnh hơn {tt1[0]}")
+                kq+=f"{tt2[0]} mạnh hơn {tt1[0]}"+"\n"
+            print(kq)
+            lssosanh.append(kq)
     except ValueError:
         print("Phải nhập giá trị số nguyên ! Quay về trang chủ")
         return
@@ -1790,6 +1802,7 @@ def ChucNang5():
             print("Nhập không có trong Menu vui lòng nhập lại")
 
 #=======================================================================
+lsdudoan=[]
 def DuDoanThangHoaThua(a,b):
     with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
         content=csv.DictReader(f)
@@ -1827,14 +1840,16 @@ def DuDoanThangHoaThua(a,b):
                     res2=chuoi_win2
         ps1=int(tt1[0])+int(tt1[1])*0.5+res1*10
         ps2=int(tt2[0])+int(tt2[1])*0.5+res2*10
-        # xét kiểm tra đội nào mạnh hơn    
+        # xét kiểm tra đội nào mạnh hơn
+        kq=""    
         if ps1 > ps2:
-            print(f"Câu lạc bộ {a} sẽ thắng câu lạc bộ {b}")
+            kq+=f"Câu lạc bộ {a} sẽ thắng câu lạc bộ {b}"
         elif ps1 < ps2:
-            print(f"Câu lạc bộ {a} sẽ thua câu lạc bộ {b}")
+            kq+=f"Câu lạc bộ {a} sẽ thua câu lạc bộ {b}"
         else:
-            print(f"Câu lạc bộ {a} sẽ hòa câu lạc bộ {b}")
-
+            kq+=f"Câu lạc bộ {a} sẽ hòa câu lạc bộ {b}"
+        print(kq)
+        return kq
 def TinhChiSoPowerScore(a,b):
     with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
         content=csv.DictReader(f)
@@ -1872,9 +1887,11 @@ def TinhChiSoPowerScore(a,b):
                     res2=chuoi_win2
         ps1=int(tt1[0])+int(tt1[1])*0.5+res1*10
         ps2=int(tt2[0])+int(tt2[1])*0.5+res2*10
-        print(f"PowerScore của câu lạc bộ {a} là: {ps1}")
-        print(f"PowerScore của câu lạc bộ {b} là {ps2}")
-
+        kq=""
+        kq+=f"PowerScore của câu lạc bộ {a} là: {ps1}"+"\n"+f"PowerScore của câu lạc bộ {b} là {ps2}\n"
+        print(kq)
+        return kq
+    
 def GiaiThichLyDo(a,b):
     with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
         content=csv.DictReader(f)
@@ -1912,27 +1929,30 @@ def GiaiThichLyDo(a,b):
                     res2=chuoi_win2
         ps1=int(tt1[0])+int(tt1[1])*0.5+res1*10
         ps2=int(tt2[0])+int(tt2[1])*0.5+res2*10
-        # xét kiểm tra đội nào mạnh hơn    
+        # xét kiểm tra đội nào mạnh hơn
+        kq=""    
         if ps1 > ps2:
-            print(f"Câu lạc bộ {a} được dự đoán thắng vì: ")
+            kq+=f"Câu lạc bộ {a} được dự đoán thắng vì: "
             if int(tt1[0])>int(tt2[0]):
-                print(f"Có điểm cao hơn: ({tt1[0]>tt2[0]})")
+                kq+="\n"+f"Có điểm cao hơn: ({tt1[0]>tt2[0]})"
             if int(tt1[1])>int(tt2[1]):
-                print(f"Có hiệu số cao hơn: ({tt1[1]}>{tt2[1]})")
+                kq+="\n"+f"Có hiệu số cao hơn: ({tt1[1]}>{tt2[1]})"
             if res1>res2:
-                print(f"Có chuỗi thắng gần đây là: {res1}")
+                kq+="\n"+f"Có chuỗi thắng gần đây là: {res1}"
         elif ps1 <ps2:
-            print(f"Câu lạc bộ {b} được dự đoán thắng vì: ")
+            kq+=f"Câu lạc bộ {b} được dự đoán thắng vì: "
             if int(tt1[0])<int(tt2[0]):
-                print(f"Có điểm cao hơn: ({tt2[0]>tt1[0]})")
+                kq+="\n"+f"Có điểm cao hơn: ({tt2[0]>tt1[0]})"
             if int(tt1[1])<int(tt2[1]):
-                print(f"Có hiệu số cao hơn: ({tt2[1]}>{tt1[1]})")
+                kq+="\n"+f"Có hiệu số cao hơn: ({tt2[1]}>{tt1[1]})"
             if res1<res2:
-                print(f"Có chuỗi thắng gần đây là: {res2}")
+                kq+="\n"+f"Có chuỗi thắng gần đây là: {res2}"
         else:
-            print(f"Câu lạc bộ {a} và {b} được dự đoán hòa vì: ")
-            print(f"PowerScore của 2 câu lạc bộ bằng nhau")
-
+            kq+=f"Câu lạc bộ {a} và {b} được dự đoán hòa vì: "
+            kq+="\n"+f"PowerScore của 2 câu lạc bộ bằng nhau"
+        print(kq)
+        return kq
+    
 def DoUyTinDuDoan(a,b):
     with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as f:
         content=csv.DictReader(f)
@@ -1970,12 +1990,15 @@ def DoUyTinDuDoan(a,b):
                     res2=chuoi_win2
         ps1=int(tt1[0])+int(tt1[1])*0.5+res1*10
         ps2=int(tt2[0])+int(tt2[1])*0.5+res2*10
+        kq=""
         if abs(ps1-ps2)<3:
-            print("Độ tin cậy thấp chưa thể chính xác")
+            kq+="Độ tin cậy thấp chưa thể chính xác"
         elif 5>=abs(ps1-ps2)>=3:
-            print("Độ tin cậy trung bình có thể tham khảo")
+            kq+="Độ tin cậy trung bình có thể tham khảo"
         else:
-            print("Độ tin cậy cao có thể tin")
+            kq+="Độ tin cậy cao có thể tin"
+        print(kq)
+        return kq
 
 def ChucNang6():
     try:
@@ -2170,7 +2193,8 @@ def ChucNang6():
                         print()
                         print()
                         print()                        
-                        DuDoanThangHoaThua(thu_nhat,thu_hai)
+                        kq=DuDoanThangHoaThua(thu_nhat,thu_hai)
+                        lsdudoan.append([thu_nhat,thu_hai,kq])
                         return
                     elif xacnhan=='N' or xacnhan=='n':
                         ChucNang6()
@@ -2184,7 +2208,8 @@ def ChucNang6():
                         print()
                         print()
                         print()                       
-                        TinhChiSoPowerScore(thu_nhat,thu_hai)
+                        kq=TinhChiSoPowerScore(thu_nhat,thu_hai)
+                        lsdudoan.append([thu_nhat,thu_hai,kq])
                         return
                     elif xacnhan=='N' or xacnhan=='n':
                         ChucNang6()
@@ -2198,7 +2223,8 @@ def ChucNang6():
                         print()
                         print()
                         print() 
-                        GiaiThichLyDo(thu_nhat,thu_hai)
+                        kq=GiaiThichLyDo(thu_nhat,thu_hai)
+                        lsdudoan.append([thu_nhat,thu_hai,kq])
                         return
                     elif xacnhan=='N' or xacnhan=='n':
                         ChucNang6()
@@ -2212,7 +2238,8 @@ def ChucNang6():
                         print()
                         print()
                         print() 
-                        DoUyTinDuDoan(thu_nhat,thu_hai)
+                        kq=DoUyTinDuDoan(thu_nhat,thu_hai)
+                        lsdudoan.append([thu_nhat,thu_hai,kq])
                     elif xacnhan=='N' or xacnhan=='n':
                         ChucNang6()
                     else:
@@ -2357,14 +2384,49 @@ def TaoFileTXT():
                 f.write(f"| {i['Hạng']:<5} | {i['Câu lạc bộ']:<15} | {i['ST']:<8} | {i['T']:<6} | {i['H']:<4} | {i['T']:<5} | {i['BT']:<10} | {i['BB']:<10} | {i['HS']:<8} | {i['5_tran_gan_nhat']:<20} |"+"\n")
                 f.write("-"*122+"\n")
     
-    print("Đã tạo file TXT thành công !")   
+    print("Đã tạo file TXT thành công !")
+
+def TaoFileCSV():
+    file=input("Nhập tên file: ")
+    with open("football_data/dulieu.txt","r",newline="",encoding="UTF-8") as g:
+        content=csv.DictReader(g)
+        with open("Football_data/CreateFile/"+file,"w",newline="",encoding="UTF-8") as f:
+            file_in=content.fieldnames
+            writer=csv.DictWriter(f,fieldnames=file_in)
+            writer.writeheader()
+            writer.writerows(content)
+        print("Đã tạo file CSV thành công !")\
+        
+def LuuLichSuFunction6(a):
+    ds: dict[tuple[str, str], list[str]] = {}
+    for doi1,doi2,noidung in a:
+        key=(doi1,doi2)
+        if key not in ds:
+            ds[key]=[]
+        ds[key].append(noidung)
+    file=input("Nhập tên file: ")
+    with open("Football_data/CreateFile/"+file,"w",newline="",encoding="UTF-8") as f:
+        for key,value in ds.items():
+            f.write(f"{key[0]} , {key[1]}"+"\n")
+            for i in value:
+                f.write(f"{i}"+"\n")
+            f.write("\n")
+    print("Đã tạo file dự đoán các đội bóng thành công !")
+
+def FileKetQuaSoSanh(a):
+    file=input("Nhập tên file: ")
+    with open("Football_data/CreateFile/"+file,"w",newline="",encoding="UTF-8") as f:
+        for i in a:
+            f.write(i+"\n")
+    print("Đã tạo file so sánh các đội bóng thafnhc công !")
+
 def ChucNang8():
     while True:
         print("===== Chọn chức năng chi tiết =====")
         print("8.1 Xuất bảng xếp hạng ra file TXT")
         print("8.2 Xuất thống kê đội bóng ra CSV")
         print("8.3 Lưu kết quả dự đoán")
-        print("8.4 Tạo báo cáo tổng kết")
+        print("8.4 Lưu kết quả so sánh")
         print("0. Thoát")
         choice=float(input("Chọn: "))
         if choice==8.1:
@@ -2383,6 +2445,7 @@ def ChucNang8():
                 xacnhan=input("Xác nhận (Y/N): ")
                 if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
+                    TaoFileCSV()
                     return
                 elif xacnhan=='N' or xacnhan=='n':
                     ChucNang8()
@@ -2393,6 +2456,7 @@ def ChucNang8():
                 xacnhan=input("Xác nhận (Y/N): ")
                 if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
+                    LuuLichSuFunction6(lsdudoan)
                     return
                 elif xacnhan=='N' or xacnhan=='n':
                     ChucNang8()
@@ -2403,6 +2467,7 @@ def ChucNang8():
                 xacnhan=input("Xác nhận (Y/N): ")
                 if xacnhan=='Y' or xacnhan=='y':
                     print("Xác nhận thành công")
+                    FileKetQuaSoSanh(lssosanh)
                     return
                 elif xacnhan=='N' or xacnhan=='n':
                     ChucNang8()
