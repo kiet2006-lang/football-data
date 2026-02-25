@@ -2240,6 +2240,7 @@ def ChucNang6():
                         print() 
                         kq=DoUyTinDuDoan(thu_nhat,thu_hai)
                         lsdudoan.append([thu_nhat,thu_hai,kq])
+                        return
                     elif xacnhan=='N' or xacnhan=='n':
                         ChucNang6()
                     else:
